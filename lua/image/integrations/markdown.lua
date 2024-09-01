@@ -40,7 +40,8 @@ return document.create_document_integration({
               range = { start_row = start_row, start_col = start_col, end_row = end_row, end_col = end_col },
             }
           elseif current_image and key == "url" then
-            current_image.url = value
+            current_image.url = "~/notes/attachments/" .. value
+            -- current_image.url = value
             table.insert(images, current_image)
             current_image = nil
           end
